@@ -1,0 +1,47 @@
+.oxmod-oxm-slider{
+/* CSS */
+    ul,li{list-style: none;margin:0;padding:0;}
+   ul{
+     display: flex;
+     align-items:center;
+   }
+   li{
+     flex-grow: 1;flex-basis:1px;
+     transition: all 1s;
+
+     img{
+       width:100%;
+
+     }
+   }
+  .dot{
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: rgba(100,100,100,.8);
+    margin:2px;
+  }
+  .index-dots{
+    margin-top:-30px;
+    height:20px;
+    text-align: center;
+  }
+
+  .loop(@n, @i: 1) when (@i =< @n) {
+
+    .is-on-@{i}{
+      .dot:nth-child(@{i}){
+        background-color: rgba(255,100,0,.8);
+      }
+      li:nth-child(@{i}){
+        flex-grow: 3;
+      }
+    }
+    .loop(@n,(@i + 1));    // next iteration
+  }
+
+  .loop(10);
+
+
+ }
