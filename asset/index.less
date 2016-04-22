@@ -1,19 +1,28 @@
 .oxmod-oxm-slider{
 /* CSS */
-    ul,li{list-style: none;margin:0;padding:0;}
-   ul{
-     display: flex;
-     align-items:center;
-   }
-   li{
-     flex-grow: 1;flex-basis:1px;
-     transition: all 1s;
-
-     img{
-       width:100%;
-
-     }
-   }
+  .slider-window{
+    overflow: hidden;
+  }
+  .slider-imgs{
+    font-size:0;
+    white-space: nowrap;
+    //overflow:hidden;
+    //transform: translate( -50%,0);
+    transition: all 1s;
+  }
+  .slider-img{
+    display: inline-block;
+    width:100%;
+    padding-bottom: 40%;
+    //max-height:300px;
+    background-position: center center;
+    background-size: 100% 100%;
+    //background-image: url(attr(data-src));
+    img{
+      width:100%;
+      height:100%;
+    }
+  }
   .dot{
     width:10px;
     height:10px;
@@ -26,6 +35,7 @@
     margin-top:-30px;
     height:20px;
     text-align: center;
+    position: relative;
   }
 
   .loop(@n, @i: 1) when (@i =< @n) {
@@ -34,8 +44,11 @@
       .dot:nth-child(@{i}){
         background-color: rgba(255,100,0,.8);
       }
+      .slider-imgs{
+        transform: translate((@i * -100% + 100%),0);
+      }
       li:nth-child(@{i}){
-        flex-grow: 3;
+        //flex-grow: 3;
       }
     }
     .loop(@n,(@i + 1));    // next iteration

@@ -4,13 +4,16 @@
     <!-- className 'J_OXMod' required  -->
     <div class="J_OXMod oxmod-oxm-slider" ox-mod="oxm-slider">
         <div class="is-on-1">
-            <ul>
-                <xsl:for-each select="data/img-slider/i">
-                    <li>
-                        <img src="{src}" title="{title}" />
-                    </li>
-                </xsl:for-each>
-            </ul>
+            <div class="slider-window">
+                <div class="slider-imgs">
+                    <xsl:for-each select="data/img-slider/i">
+                        <span class="slider-img" style="background-image:url({src})" title="{title}">
+                            <!--
+                            <img src="{src}" title="{title}" />-->
+                        </span>
+                    </xsl:for-each>
+                </div>
+            </div>
             <div class="index-dots">
                 <xsl:for-each select="data/img-slider/i">
                 <i class="dot"></i>

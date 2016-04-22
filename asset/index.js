@@ -6,7 +6,7 @@ define(['jquery'],function($){
             //console.log(mod.attr('ox-mod'),'init')
             //mod.css({'border':'solid 1px red'})
            var wrap=this.wrap= mod.children('div');
-            this.count=wrap.children('ul').children('li').length;
+            this.count=wrap.find('.slider-img').length;
             this.play()
         },
         currentIndex:0,
