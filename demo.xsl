@@ -6,6 +6,7 @@
   <xsl:template match="/root">
     <html>
       <head>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
         <title>oxm-slider Demo</title>
         <link rel="stylesheet" type="text/css" href="//openxsl.com/css/normalize.css" />
         <link rel="stylesheet" type="text/css" href="asset/index.css" />
@@ -13,23 +14,21 @@
         <script src="//openxsl.com/js/require.js"></script>
       </head>
       <body>
-
         <div class="layout">
           <xsl:call-template name="oxm-slider" />
         </div>
-        <script>
+        <script><![CDATA[
           require.config({
           paths: {
-          jquery: 'http://openxsl.com/js/jquery',
-          mustache: 'http://openxsl.com/js/mustache'
+            zepto: '//openxsl.com/js/zepto.min',
+            mustache: '//openxsl.com/js/mustache',
+            oxm:'//openxsl.com/oxm/'
           }
           });
-
-          require(['jquery','asset/index'],function($,Mod){
-          Mod.init($('.J_OXMod'));
-
+          require(['zepto','asset/index'],function(undefine,Mod){
+            Mod && Mod.init && Mod.init($('.J_OXMod'));
           })
-        </script>
+        ]]></script>
 
       </body>
 

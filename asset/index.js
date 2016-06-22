@@ -1,13 +1,25 @@
-define(['jquery'],function($){
+define(['zepto','oxm/oxmjs-flip/1.1.0/asset/index'],function(undef,Flip){
     //console.log(arguments)
     //alert(1)
     return {
         init:function(mod){
             //console.log(mod.attr('ox-mod'),'init')
             //mod.css({'border':'solid 1px red'})
-           var wrap=this.wrap= mod.children('div');
-            this.count=wrap.find('.slider-img').length;
-            this.play()
+            /*
+             var wrap=this.wrap= mod.children('div');
+             this.count=wrap.find('.slider-img').length;
+             this.play()
+
+             */
+
+            Flip.init(mod,{
+                //wrap:mod.children('div'),
+                classes:{
+                    flipPage:'slider-img',
+                    flipWindow:'slider-window',
+                    transition:'transition'
+                }
+            })
         },
         currentIndex:0,
         play:function(){

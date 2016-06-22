@@ -3,7 +3,7 @@
     <xsl:template match="/root" name="oxm-slider">
     <!-- className 'J_OXMod' required  -->
     <div class="J_OXMod oxmod-oxm-slider" ox-mod="oxm-slider">
-        <div class="is-on-1">
+        <div data-on="1">
             <div class="slider-window">
                 <div class="slider-imgs">
                     <xsl:for-each select="data/img-slider/i">
