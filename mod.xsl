@@ -4,7 +4,7 @@
     <!-- className 'J_OXMod' required  -->
     <div class="J_OXMod oxmod-oxm-slider" ox-mod="oxm-slider">
         <div data-on="1">
-            <div class="slider-window">
+            <div class="slider-window transition">
                 <div class="slider-imgs">
                     <xsl:for-each select="data/img-slider/i">
                         <span class="slider-img" style="background-image:url({src})" title="{title}">

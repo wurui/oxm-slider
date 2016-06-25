@@ -1,4 +1,4 @@
-define(['zepto','oxm/oxmjs-flip/1.1.0/asset/index'],function(undef,Flip){
+define(['zepto','oxm/oxmjs-flip/1.2.0/asset/index'],function(undef,Flip){
     //console.log(arguments)
     //alert(1)
     return {
@@ -12,23 +12,50 @@ define(['zepto','oxm/oxmjs-flip/1.1.0/asset/index'],function(undef,Flip){
 
              */
 
-            Flip.init(mod,{
+            var inst=Flip.init(mod,{
                 //wrap:mod.children('div'),
                 classes:{
                     flipPage:'slider-img',
                     flipWindow:'slider-window',
                     transition:'transition'
                 }
-            })
+            });
+            inst.play()
+
+            /*
+            var wrap=this.wrap= mod.children('div');
+            var that=this;
+            wrap.on('touchstart',function(){
+                that.pause=true;
+            });
+            $('body').on('touchend',function(){
+                console.log('pause',that.pause)
+
+                that.pause=false;
+            });
+            this.count=wrap.find('.slider-img').length;
+            this.play()
+            */
         },
-        currentIndex:0,
-        play:function(){
-            if(!this.count) return this;
-            this.currentIndex++;
+        play:function() {
 
-            this.currentIndex=this.currentIndex%this.count;
 
-            this.wrap[0].className='is-on-'+(this.currentIndex+1);
+            if (!this.count) return this;
+
+            console.log('pause of this',this.pause)
+
+            if (!this.pause) {
+
+                var wrap = this.wrap;
+                var currentIndex = wrap.attr('data-on') - 1;
+
+
+                currentIndex = (++currentIndex) % this.count;
+
+                wrap.children('.slider-window').addClass('transition')
+                wrap.attr('data-on', currentIndex + 1);
+            }
+
 
             var _this=this;
 
