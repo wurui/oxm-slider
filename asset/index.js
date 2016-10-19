@@ -1,6 +1,5 @@
 define(['zepto','oxm/wurui/oxmjs-flip/1.2.0/asset/index'],function(undef,Flip){
-    //console.log(arguments)
-    //alert(1)
+
     return {
         init:function(mod){
             //console.log(mod.attr('ox-mod'),'init')
@@ -22,27 +21,13 @@ define(['zepto','oxm/wurui/oxmjs-flip/1.2.0/asset/index'],function(undef,Flip){
             });
             inst.play()
 
-            /*
-            var wrap=this.wrap= mod.children('div');
-            var that=this;
-            wrap.on('touchstart',function(){
-                that.pause=true;
-            });
-            $('body').on('touchend',function(){
-                console.log('pause',that.pause)
-
-                that.pause=false;
-            });
-            this.count=wrap.find('.slider-img').length;
-            this.play()
-            */
         },
         play:function() {
 
 
             if (!this.count) return this;
 
-            console.log('pause of this',this.pause)
+           // console.log('pause of this',this.pause)
 
             if (!this.pause) {
 
