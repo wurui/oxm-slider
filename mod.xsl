@@ -1,6 +1,6 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <xsl:template match="/root" name="oxm-slider">
+    <xsl:template match="/root" name="wurui.oxm-slider">
     <!-- className 'J_OXMod' required  -->
     <div class="J_OXMod oxmod-oxm-slider" ox-mod="oxm-slider">
         <div data-on="1">
