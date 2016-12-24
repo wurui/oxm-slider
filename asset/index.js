@@ -1,4 +1,4 @@
-define(['zepto','oxm/wurui/oxmjs-flip/1.3.0/asset/index'],function(undef,Flip){
+define(['zepto','oxm/wurui/oxmjs-flip/1.3.1/asset/index'],function(undef,Flip){
 
     return {
         init:function(mod){

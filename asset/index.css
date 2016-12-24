@@ -1,8 +1,8 @@
-html,
-body,
-.layout {
-  height: 100%;
+/*
+html,body,.layout{
+  height:100%; //why?
 }
+*/
 .oxmod-oxm-slider {
   overflow: hidden;
   /* CSS */
