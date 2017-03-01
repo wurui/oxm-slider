@@ -22,7 +22,9 @@ define(['zepto','oxm/wurui/oxmjs-flip/1.4.0/asset/index','oxjs'],function(undef,
             inst.play();
             $('.slider-img').on('tap',function(e){
                 //console.log(e.target);
-                location.href= e.target.getAttribute('data-href')
+                var href=e.target.getAttribute('data-href');
+
+                href && (location.href= href)
             })
 
         }
