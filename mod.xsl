@@ -7,7 +7,7 @@
             <div class="slider-window transition">
                 <div class="slider-imgs">
                     <xsl:for-each select="data/img-slider/i">
-                        <span class="slider-img" style="background-image:url({src})" title="{title}">
+                        <span data-href="{href}" class="slider-img" style="background-image:url({src})" title="{title}">
                             <!--
                             <img src="{src}" title="{title}" />-->
                         </span>

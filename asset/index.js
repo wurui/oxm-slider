@@ -1,4 +1,4 @@
-define(['zepto','oxm/wurui/oxmjs-flip/1.4.0/asset/index'],function(undef,Flip){
+define(['zepto','oxm/wurui/oxmjs-flip/1.4.0/asset/index','oxjs'],function(undef,Flip){
 
     return {
         init:function(mod){
@@ -19,36 +19,12 @@ define(['zepto','oxm/wurui/oxmjs-flip/1.4.0/asset/index'],function(undef,Flip){
                     transition:'transition'
                 }
             });
-            inst.play()
+            inst.play();
+            $('.slider-img').on('tap',function(e){
+                //console.log(e.target);
+                location.href= e.target.getAttribute('data-href')
+            })
 
-        },
-        play:function() {
-
-
-            if (!this.count) return this;
-
-           // console.log('pause of this',this.pause)
-
-            if (!this.pause) {
-
-                var wrap = this.wrap;
-                var currentIndex = wrap.attr('data-on') - 1;
-
-
-                currentIndex = (++currentIndex) % this.count;
-
-                wrap.children('.slider-window').addClass('transition')
-                wrap.attr('data-on', currentIndex + 1);
-            }
-
-
-            var _this=this;
-
-            setTimeout(function(){
-                _this.play();
-            },3000)
-
-            return this;
         }
     }
 })

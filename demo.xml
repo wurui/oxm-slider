@@ -7,16 +7,19 @@
     <data>
         <img-slider>
             <i>
+                <href>http://a.oxm1.cc/img/fox.jpg?t=1</href>
                 <title>wallet</title>
-                <src>http://static.openxsl.com/img/fox.jpg</src>
+                <src>http://a.oxm1.cc/img/fox.jpg</src>
             </i>
             <i>
+                <href>http://a.oxm1.cc/img/fox.jpg?t=2</href>
                 <title>laptop</title>
-                <src>http://static.openxsl.com/img/fox.jpg</src>
+                <src>http://a.oxm1.cc/img/fox.jpg</src>
             </i>
             <i>
+                <href>http://a.oxm1.cc/img/fox.jpg?t=3</href>
                 <title>light-weight camera</title>
-                <src>http://static.openxsl.com/img/fox.jpg</src>
+                <src>http://a.oxm1.cc/img/fox.jpg</src>
             </i>
         </img-slider>
     </data>
