@@ -1,4 +1,4 @@
-define(['zepto','oxm/wurui/oxmjs-flip/1.4.0/asset/index','oxjs'],function(undef,Flip){
+define(['zepto','oxm/wurui/oxmjs-flip/1.6.0/asset/index','oxjs'],function(undef,Flip){
 
     return {
         init:function(mod){
@@ -20,12 +20,13 @@ define(['zepto','oxm/wurui/oxmjs-flip/1.4.0/asset/index','oxjs'],function(undef,
                 }
             });
             inst.play();
+            /*
             $('.slider-img').on('tap',function(e){
                 //console.log(e.target);
                 var href=e.target.getAttribute('data-href');
 
                 href && (location.href= href)
-            })
+            })*/
 
         }
     }
